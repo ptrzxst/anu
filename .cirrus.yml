@@ -1,0 +1,50 @@
+env:
+    rclone_config: "ENCRYPTED[81f2ea42a1bb72f5514f01604e25bb9057eb0b6f1b0f5a18434dd7175df07619a880e75ecb9597e10e69fba44553fe84]"
+    config: "ENCRYPTED[1f69e3fe56490308fe6b5857177c5c7669d96d3539f11557caa8894ce762abc8b1166cd7b4c40f8de824ae3a1e491b11]"
+    credentials: "ENCRYPTED[a36b42522be46a7b58ceb973ce08b60006c0b8bd732373d4eedd4a04788a66d3d41427b44ae18a1bdb6d3273e4855d90]"
+    download: "ENCRYPTED[ffce218bfbb6254654d2be0d2a2ac91d40b6ea69a5eb68259be6e2c16f2bdadc05749714d623d41fdcd68b48f7301fb3]"
+
+task:
+    name: dummy
+    timeout_in: 120m
+    container:
+      image: inok2341/anu:dummy
+      cpu: 8
+      memory: 32G      
+
+    setup_script:
+      - mkdir -p ~/.config/rclone
+      - echo "$rclone_config" > ~/.config/rclone/rclone.conf
+      - echo "$github" > ~/.git-credentials
+      - cd /tmp
+      - git clone https://github.com/I-n-o-k/android_tools /tmp/anu
+      - cd /tmp
+      - export HOME=/root
+      - git config --global user.name I-n-o-k
+      - git config --global user.enail inok.dr189@gmail.com
+      - echo "$credentials" > ~/.git-credentials
+      - git config --global credential.helper store --file=~/.git-credentials
+      - rm -rf anu
+      - git clone https://github.com/I-n-o-k/android_tools anu
+      - sudo bash anu/setup.sh
+      - sudo bash anu/tools/rom_extract.sh https://eunha.ovin.my.id/0:/Data/xiaomi.eu_multi_HMNote94G_HM9T_21.9.28_v12-11.zip
+
+    dummy_script:
+      - sudo bash /tmp/anu/tools/dummy_dt.sh /tmp/anu/dumps/*
+      - git clone https://github.com/LineageOS/android_tools_extract-utils /tmp/los/tools/extract-utils
+      - git clone https://github.com/I-n-o-k/device_xiaomi_juice -b qti-bt /tmp/los/device/xiaomi/juice
+      - git clone https://gitlab.com/I-n-o-k/vendor-lime -b 11 /tmp/los/vendor/xiaomi/juice
+      - sudo bash /tmp/los/device/xiaomi/juice/extract-files.sh /tmp/anu/dumps/*
+      - rm -rf /tmp/anu/dummy_dt/working
+      - mv /tmp/anu/dummy_dt/*/*/proprietary-files.txt /tmp/los/vendor/xiaomi/juice
+
+    kang_script:
+      - ./kang.sh
+
+    push_script:
+      - cd /tmp/los/vendor/xiaomi/juice
+      - git init
+      - git add .
+      - git commit -m "clean up" -m "$(git status)"
+      - git push -f origin
+    
