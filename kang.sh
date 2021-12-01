@@ -21,6 +21,10 @@ curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.battery
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/batterysecret https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/batterysecret
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/batterysecret
 
+# Kang nv_mac from SM825P
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/nv_mac
+chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac
+
 # Kang btconfigstore from SM8150
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8150-common/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8150-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
