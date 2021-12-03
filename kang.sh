@@ -15,8 +15,12 @@ curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/radio/qcril_database/
 # Kang bluetooth service qti from SM8250
 rm -rf /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 rm -rf /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+rm -rf /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+rm -rf /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/libbtnv.so
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/android.hardware.bluetooth@1.0-service-qti
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/libbtnv.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/lib64/libbtnv.so
 
 # Kang libaptX from SM8250
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/system_ext/lib64/libaptXHD_encoder.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/system_ext/lib64/libaptXHD_encoder.so
