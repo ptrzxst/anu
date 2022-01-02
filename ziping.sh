@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5s
+
 cd /tmp
 
 com ()
