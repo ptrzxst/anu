@@ -38,8 +38,8 @@ task:
       - rm -rf /tmp/anu/dummy_dt/working
       - mv /tmp/anu/dummy_dt/*/*/proprietary-files.txt /tmp/los/vendor/xiaomi/juice
 
-    kang_script:
-      - ./kang.sh
+#    kang_script:
+#      - ./kang.sh
 
     push_script:
       - cd /tmp/los/vendor/xiaomi/juice
