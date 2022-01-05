@@ -17,7 +17,9 @@ curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.battery
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/batterysecret https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/batterysecret
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/batterysecret
 
-# Kang nv_mac from SM825P
+# Kang nv_mac from SM8250
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/nv_mac
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac
 
+# mithermald from 8250
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi_thermald.rc https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/etc/init/init.mi_thermald.rc
