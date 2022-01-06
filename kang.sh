@@ -21,6 +21,8 @@ chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/batterysecret
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/bin/nv_mac
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/nv_mac
 
-# mithermald from 8250
+# Kang mithermald from SM8250
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi_thermald.rc https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/etc/init/init.mi_thermald.rc
 
+# Kang libspl from SM8250
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/libspl.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/lib64/libspl.so
