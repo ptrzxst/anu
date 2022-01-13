@@ -51,6 +51,8 @@ task:
       - rm -rf hardware/qcom-caf/sm8250/display
       - rm -rf hardware/qcom-caf/sm8250/media
       - rm -rf external/json-c
+      - rm -rf hardware/xiaomi
+      - git clone --depth=1https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi
       - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_audio hardware/qcom-caf/sm8250/audio
       - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_display hardware/qcom-caf/sm8250/display
       - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_media hardware/qcom-caf/sm8250/media
