@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# add bluetooth lib as vendor
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib/android.hardware.bluetooth@1.0.so https://transfer.sh/efSztv/android.hardware.bluetooth@1.0.so
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib/android.hardware.bluetooth@1.1.so https://transfer.sh/XEg4az/android.hardware.bluetooth@1.1.so
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/android.hardware.bluetooth@1.0.so https://transfer.sh/kd6J4D/android.hardware.bluetooth@1.0.so
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so https://transfer.sh/0AU9LK/android.hardware.bluetooth@1.1.so
+
 # add prebuilt some app
 rm -rf /tmp/los/vendor/xiaomi/juice/proprietary/system_ext/priv-app/SimpleDeviceConfig
 mkdir -p /tmp/los/vendor/xiaomi/juice/proprietary/system_ext/priv-app/SimpleDeviceConfig
