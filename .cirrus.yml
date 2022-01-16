@@ -4,7 +4,7 @@ env:
     idtl: "ENCRYPTED[34e83ce99a26a43722c25a9237e72beb606357204ef3029e5fe641f449ebd90db2ae3b7a2676bf686c62ffa9606f48db]"
 
 task:
-  name: "Setting Up, Syncing, Building and Uploading..."
+  name: Setting Up, Syncing...
   timeout_in: 480m  
   container:
       image: inok2341/anu:latest
@@ -61,6 +61,16 @@ task:
       - echo "============================"
       - echo "Sync Completed!"
       - echo "============================"
+
+task:
+  name: Building and Uploading...
+  depends_on:
+    - Setting Up, Syncing...
+  timeout_in: 480m  
+  container:
+      image: inok2341/anu:latest
+      cpu: 8
+      memory: 32G
 
   Build_script:
       - echo "============================"
