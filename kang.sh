@@ -34,6 +34,6 @@ curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi_ther
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/libspl.so https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/raw/lineage-18.1/sm8250-common/proprietary/vendor/lib64/libspl.so
 
 # Kang init.mi.btmac from SM8250
-curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi.btmac.rc https://gitlab.com/I-n-o-k/vendor-lime/-/raw/11/proprietary/vendor/etc/init/init.mi.btmac.rc
-curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/init.mi.btmac.sh https://gitlab.com/I-n-o-k/vendor-lime/-/raw/11/proprietary/vendor/bin/init.mi.btmac.sh
+#curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi.btmac.rc https://gitlab.com/I-n-o-k/vendor-lime/-/raw/11/proprietary/vendor/etc/init/init.mi.btmac.rc
+#curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/init.mi.btmac.sh https://gitlab.com/I-n-o-k/vendor-lime/-/raw/11/proprietary/vendor/bin/init.mi.btmac.sh
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/init.mi.btmac.sh 
