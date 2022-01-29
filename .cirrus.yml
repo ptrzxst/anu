@@ -17,13 +17,8 @@ task:
   Build-Env-Setup_background_script:
        - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Setup Build"
        - export DEBIAN_FRONTEND=noninteractive
-       - apt update
-       - apt install sudo
        - mkdir -p ~/.config/rclone
        - echo "$rcloneconfig" > ~/.config/rclone/rclone.conf
-       - DEBIAN_FRONTEND=noninteractive
-       - sudo apt install python3 -y
-       - sudo ln -sf /usr/bin/python3 /usr/bin/python
        - git config --global user.name "I-n-o-k"
        - git config --global user.email "inok.dr189@gmail.com"
        - echo "$credentials" > ~/.git-credentials
@@ -58,8 +53,8 @@ task:
       - echo "============================"
       - echo "Starting the Build..."
       - echo "============================"
-#      - ./collect.sh
-      - ./final.sh
+      - ./collect.sh
+#      - ./final.sh
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Build $(cd /tmp/rom/out/target/product/juice/ && ls Nusantara*.zip) Completed!"
       - echo "============================"
       - echo "Build Completed!"
@@ -70,7 +65,7 @@ task:
       - echo "Uploading the Build...."
       - echo "============================"
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Uploading Build $(cd /tmp/rom/out/target/product/juice/ && ls Nusantara*.zip)"
-      - rclone copy /tmp/rom/out/target/product/juice/Nusantara*.zip inok:juice -P
+#      - rclone copy /tmp/rom/out/target/product/juice/Nusantara*.zip inok:juice -P
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Build $(cd /tmp/rom/out/target/product/juice/ && ls Nusantara*.zip) Uploaded Successfully!"
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Download link http://anu.inok189.workers.dev/juice/$(cd /tmp/rom/out/target/product/juice/ && ls Nusantara*.zip)"
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Compres ccache"
