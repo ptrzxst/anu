@@ -24,7 +24,7 @@ task:
        - echo "$credentials" > ~/.git-credentials
        - git config --global credential.helper store --file=~/.git-credentials
        - mkdir -p /tmp/ccache
-       - rclone copy inok:nad12/ccache.tar.gz /tmp -P
+       - rclone copy inok:nad/ccache.tar.gz /tmp -P
        - cd /tmp
        - time tar xf ccache.tar.gz
        - cd /tmp
@@ -72,7 +72,7 @@ task:
       - ./ziping.sh
       - cd /tmp
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Uploading ccache...."
-      - rclone copy ccache.tar.gz inok:nad12 -P
+      - rclone copy ccache.tar.gz inok:nad -P
       - echo " "
       - echo "============================"
       - echo "Build Uploaded Successfully!"
