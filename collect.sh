@@ -9,6 +9,8 @@ ccache -M 20G
 ccache -o compression=true
 ccache -z
 $lunch
+make android.hardware.bluetooth@1.0.vendor
+make android.hardware.bluetooth@1.1.vendor
 $make -j8 &
 sleep 100m
 kill %1
