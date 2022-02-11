@@ -6,7 +6,7 @@ curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib/android.hardware.
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/android.hardware.bluetooth@1.0.so https://transfer.sh/kd6J4D/android.hardware.bluetooth@1.0.so
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so https://transfer.sh/0AU9LK/android.hardware.bluetooth@1.1.so
 
-curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi.btmac.rc https://transfer.sh/OWokr6/init.mi.btmac.rc
+curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/etc/init/init.mi.btmac.rc https://transfer.sh/9sjRRC/init.mi.btmac.rc
 curl -L -o /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/init.mi.btmac.sh https://transfer.sh/5VNmPY/init.mi.btmac.sh
 chmod 755 /tmp/los/vendor/xiaomi/juice/proprietary/vendor/bin/init.mi.btmac.sh
 
