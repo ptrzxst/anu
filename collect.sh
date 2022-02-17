@@ -5,8 +5,7 @@ cd ~/rom
 export CCACHE_DIR=~/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-ccache -M 20G -F 0
-ccache -z
+ccache -M 8G -F 0
 $lunch
 $make -j8 &
 sleep 100m
