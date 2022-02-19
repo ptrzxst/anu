@@ -39,7 +39,7 @@ task:
       - mv /tmp/anu/dummy_dt/*/*/proprietary-files.txt /tmp/los/vendor/xiaomi/juice
 
     kang_script:
-      - ./kang.sh
+#      - ./kang.sh
 
     push_script:
       - cd /tmp/los/vendor/xiaomi/juice
