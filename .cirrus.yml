@@ -54,7 +54,7 @@ task:
       - echo "============================"
       - echo "Starting the Build..."
       - echo "============================"
-#      - ./collect.sh
+      - ./collect.sh
       - ./final.sh
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Build $(cd /tmp/rom/out/target/product/juice/ && ls Nusantara*.zip) Completed!"
       - echo "============================"
